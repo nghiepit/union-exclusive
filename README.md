@@ -16,7 +16,9 @@ Using mutually exclusives types _(XOR)_ is not a default feature in Typescript, 
 **This package allow it by introducing the new type `XORS` type**
 
 ```ts
-type MyType = UnionExclusive<[A, B, C, string, number[], [string, number, boolean], ...]>
+type MyUnionType = UnionExclusive<
+  A | B | C | string | number[] | [string, number, boolean]
+>;
 ```
 
 `UnionExclusive` type take a list of type without size restriction include Primitive and Tuple type.
@@ -44,7 +46,7 @@ yarn add -D union-exclusive
 
 ### Examples
 
-**Codesanbox:** https://codesandbox.io/s/union-exclusive-demo-7flig
+**Codesandbox:** https://codesandbox.io/s/union-exclusive-demo-7flig
 
 ```ts
 import {UnionExclusive} from 'union-exclusive';

@@ -1,6 +1,6 @@
 {
   "name": "union-exclusive",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Compose custom types containing multiple mutually exclusive type and works with Primitive and Tuple.",
   "keywords": [
     "union-exclusive",
