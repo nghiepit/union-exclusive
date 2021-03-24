@@ -1,6 +1,6 @@
 type Never<T> = {[P in keyof T]?: never};
 
-// Referent https://github.com/sindresorhus/type-fest/blob/main/source/union-to-intersection.d.ts
+// Reference https://github.com/sindresorhus/type-fest/blob/main/source/union-to-intersection.d.ts
 type UnionToIntersection<Union> = (
   Union extends unknown ? (distributedUnion: Union) => void : never
 ) extends (mergedIntersection: infer Intersection) => void
