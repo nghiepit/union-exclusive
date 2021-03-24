@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "esnext.bigint", "esnext.symbol"],
+    "moduleResolution": "Node"
+  },
+  "include": ["index.ts"]
+}
