@@ -7,11 +7,11 @@ type UnionToIntersection<Union> = (
   ? Intersection
   : never;
 
-type UnionDistribute<Union, AllUnion> = Union extends any
-  ? Union & Never<Omit<UnionToIntersection<AllUnion>, keyof Union>>
+type UnionDistribute<U1, U2> = U1 extends any
+  ? U1 & Never<Omit<UnionToIntersection<U2>, keyof U1>>
   : never;
 
-export type UnionExclusive<Union> = UnionDistribute<
-  Union,
-  Exclude<Extract<Union, Record<string, any>>, Array<any>>
+export type Union<U> = UnionDistribute<
+  U,
+  Exclude<Extract<U, Record<string, any>>, Array<any>>
 >;
